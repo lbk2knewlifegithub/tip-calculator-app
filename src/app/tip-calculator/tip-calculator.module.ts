@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { TipCalculatorComponent } from './components';
+import { BillInputComponent, TipCalculatorComponent } from './components';
 import { TipCalculatorPageComponent } from './containers';
+import { TipCalculatorRoutingModule } from './tip-calculator-routing.module';
 
-const COMPONENTS = [TipCalculatorComponent];
+const COMPONENTS = [TipCalculatorComponent, BillInputComponent];
 const CONTAINERS = [TipCalculatorPageComponent];
 
 @NgModule({
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, TipCalculatorRoutingModule],
   declarations: [COMPONENTS, CONTAINERS],
 })
 export class TipCalculatorModule {}

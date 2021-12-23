@@ -22,37 +22,23 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        cyan: {
+          500: "hsl(189, 41%, 97%)",
+          600: "hsl(185, 41%, 84%)",
+          700: "hsl(184, 14%, 56%)",
+          800: "hsl(186, 14%, 43%)",
+          900: "hsl(183, 100%, 15%)",
+        },
+      },
       // create custom fonts here
       fontFamily: {
-        heading: "'LoraRegular', 'serif'",
-        mono: ["'DMMonoRegular'", ...defaultTheme.fontFamily.mono],
-      },
-      // create custom text colors here
-      textColor: {
-        fill: withOpacity("--text-fill"),
-        muted: withOpacity("--text-muted"),
-        inverted: withOpacity("--text-inverted"),
-      },
-      // create custom background colors here
-      backgroundColor: {
-        fill: withOpacity("--bg-fill"),
-        footer: withOpacity("--bg-footer"),
-        "button-accent": withOpacity("--bg-button-accent"),
-        "button-accent-hover": withOpacity("--bg-button-accent-hover"),
-        "button-muted": withOpacity("--bg-button-muted"),
-      },
-      borderColor: {
-        danger: withOpacity("--border-danger"),
-      },
-      // create custom gradient color here
-      gradientColorStops: {
-        hue: withOpacity("--color-fill"),
+        mono: ["'Space Mono'", ...defaultTheme.fontFamily.mono],
       },
     },
   },
   plugins: [
     require("@tailwindcss/forms"),
-    require("@tailwindcss/line-clamp"),
     plugin(function ({ addComponents }) {
       addComponents({
         ".container": {
