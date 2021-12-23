@@ -23,7 +23,7 @@ const SELECT_TIP_ACCESSOR = {
     <div class="space-y-4">
       <p class="text-cyan-700 font-black">Select Tip %</p>
 
-      <div class="grid gap-4 grid-cols-2">
+      <div class="grid gap-4 grid-cols-2 sm:grid-cols-3">
         <ng-container *ngFor="let tip of tips">
           <button
             type="button"

@@ -11,16 +11,16 @@ import { Result } from '../models';
   selector: 'lbk-result',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="bg-cyan-900 px-6 py-8 rounded-xl space-y-6">
-      <div class="grid gap-4">
+    <div class="flex flex-col gap-6 bg-cyan-900 px-6 py-8 rounded-xl  lg:h-full md:justify-between lg:p-10 lg:pt-8">
+      <div class="grid gap-4 lg:gap-12">
         <!-- tip amount person -->
         <div class="flex justify-between">
           <div class="font-black">
-            <p class="text-white">Tip Amount</p>
+            <p class="text-white lg:text-lg">Tip Amount</p>
             <p class="text-cyan-600">/ person</p>
           </div>
 
-          <p class="text-cyan-800 text-3xl font-black">
+          <p class="text-cyan-800 text-3xl font-black lg:text-5xl">
             {{ tipPerPerson | currency }}
           </p>
         </div>
@@ -29,11 +29,11 @@ import { Result } from '../models';
         <!-- total -->
         <div class="flex justify-between">
           <div class="font-black">
-            <p class="text-white">Total</p>
+            <p class="text-white lg:text-lg">Total</p>
             <p class="text-cyan-600">/ person</p>
           </div>
 
-          <p class="text-cyan-800 text-3xl font-black">
+          <p class="text-cyan-800 text-3xl font-black lg:text-5xl">
             {{ totalPerPerson | currency }}
           </p>
         </div>
