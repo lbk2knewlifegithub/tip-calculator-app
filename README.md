@@ -1,6 +1,6 @@
 <h1>Frontend mentor <a target="_blank" href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX"></a>Tip calculator app</h1>
 
-<a href=" https://angry-spence-2a3caa.netlify.app">
+<a href="https://heuristic-benz-4d7817.netlify.app">
 <p>My site deployed to Netlify</p>
 </a>
 
