@@ -8,6 +8,7 @@ import {
   ViewChild
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { listAnimation } from '@lbk/shared/animations';
 
 const SELECT_TIP_ACCESSOR = {
   provide: NG_VALUE_ACCESSOR,
@@ -23,7 +24,7 @@ const SELECT_TIP_ACCESSOR = {
     <div class="space-y-4">
       <p class="text-cyan-700 font-black">Select Tip %</p>
 
-      <div class="grid gap-4 grid-cols-2 sm:grid-cols-3">
+      <div @listAnimation class="grid gap-4 grid-cols-2 sm:grid-cols-3">
         <ng-container *ngFor="let tip of tips">
           <button
             type="button"
@@ -56,6 +57,7 @@ const SELECT_TIP_ACCESSOR = {
       }
     `,
   ],
+  animations: [listAnimation()],
 })
 export class SelectTipComponent implements ControlValueAccessor {
   @Input() tips: number[] = [0.05, 0.1, 0.15, 0.25, 0.5];

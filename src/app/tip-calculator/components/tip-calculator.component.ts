@@ -1,5 +1,11 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  slideInBottom,
+  slideInLeft,
+  slideInRight,
+  slideInTop
+} from '@lbk/shared/animations';
 import { map, Observable } from 'rxjs';
 import { Result } from '../models';
 
@@ -13,17 +19,21 @@ import { Result } from '../models';
     >
       <div class="grid gap-6">
         <!-- bill input -->
-        <lbk-bill-input [parent]="formGroup"></lbk-bill-input>
+        <lbk-bill-input @slideInTop [parent]="formGroup"></lbk-bill-input>
         <!-- end bill input -->
 
-        <lbk-select-tip formControlName="tip"></lbk-select-tip>
+        <lbk-select-tip @slideInLeft formControlName="tip"></lbk-select-tip>
 
         <!-- number of people -->
-        <lbk-number-of-people [parent]="formGroup"></lbk-number-of-people>
+        <lbk-number-of-people
+          @slideInBottom
+          [parent]="formGroup"
+        ></lbk-number-of-people>
         <!-- end number of people -->
       </div>
 
       <lbk-result
+        @slideInRight
         class="block lg:h-full w-full"
         (reset)="onReset()"
         [result]="(result$ | async)!"
@@ -31,6 +41,12 @@ import { Result } from '../models';
       ></lbk-result>
     </form>
   `,
+  animations: [
+    slideInLeft({ delay: 600 }),
+    slideInRight({ delay: 300 }),
+    slideInBottom({ delay: 900 }),
+    slideInTop({ delay: 900 }),
+  ],
 })
 export class TipCalculatorComponent implements OnInit {
   formGroup!: FormGroup;

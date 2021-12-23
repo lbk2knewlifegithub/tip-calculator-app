@@ -20,7 +20,7 @@ import { Result } from '../models';
             <p class="text-cyan-600">/ person</p>
           </div>
 
-          <p class="text-cyan-800 text-3xl font-black lg:text-5xl">
+          <p class="text-cyan-800 text-3xl font-black lg:text-4xl">
             {{ tipPerPerson | currency }}
           </p>
         </div>
@@ -33,7 +33,7 @@ import { Result } from '../models';
             <p class="text-cyan-600">/ person</p>
           </div>
 
-          <p class="text-cyan-800 text-3xl font-black lg:text-5xl">
+          <p class="text-cyan-800 text-3xl font-black lg:text-4xl">
             {{ totalPerPerson | currency }}
           </p>
         </div>
