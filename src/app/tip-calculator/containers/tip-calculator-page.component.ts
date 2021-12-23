@@ -5,9 +5,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <header>
-      <nav>
+      <nav class="my-10">
         <a routerLink="/">
-          <h1 class="text-cyan-800 font-black text-2xl tracking-[4px]">
+          <h1 class="text-center text-cyan-900 font-black text-2xl tracking-[4px]">
             SPLI<br />
             TTER
           </h1>

@@ -34,6 +34,21 @@
   [multiple],
   textarea,
   select {
-    @apply font-black text-cyan-900 w-full border-none bg-cyan-500  rounded-lg shadow-sm focus:border-cyan-900 focus:ring-2 focus:ring-cyan-900;
+    @apply font-black text-cyan-900 w-full border-2 border-transparent bg-cyan-400  rounded-lg shadow-sm focus:border-cyan-800;
   }
 }
+
+@layer components {
+  .btn {
+    @apply  py-3 rounded-md disabled:opacity-50 hover:brightness-110;
+  }
+
+  .btn-primary {
+    @apply bg-cyan-800 text-cyan-900 tracking-wide font-black;
+  }
+
+}
+
+  input.ng-invalid.ng-dirty {
+    border: 2px solid red;
+  }
