@@ -42,10 +42,10 @@ import { Result } from '../models';
     </form>
   `,
   animations: [
-    slideInLeft({ delay: 600 }),
-    slideInRight({ delay: 300 }),
-    slideInBottom({ delay: 900 }),
-    slideInTop({ delay: 900 }),
+    slideInLeft({delay: 150}),
+    slideInRight({delay: 150}),
+    slideInBottom({ delay: 300 }),
+    slideInTop({ delay: 300 }),
   ],
 })
 export class TipCalculatorComponent implements OnInit {

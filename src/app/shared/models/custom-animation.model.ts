@@ -7,6 +7,6 @@ export interface CustomAnimation {
 
 export const DefaultCustomAnimation: CustomAnimation = {
   duration: 300,
-  delay: 100,
+  delay: 0,
   timing: 'ease-in-out',
 };

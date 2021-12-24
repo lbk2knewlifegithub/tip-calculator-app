@@ -19,7 +19,7 @@ export function listAnimation(option?: CustomAnimation) {
           '*',
           [
             style({ opacity: 0, transform: 'translateX(-100%)' }),
-            stagger(200, [animate('0.23s')]),
+            stagger(100, [animate('70ms')]),
           ],
           { optional: true }
         ),
