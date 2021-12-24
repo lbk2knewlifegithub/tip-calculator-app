@@ -40,15 +40,14 @@
 
 @layer components {
   .btn {
-    @apply  py-3 rounded-md disabled:opacity-50 hover:brightness-110;
+    @apply py-3 rounded-md duration-500 disabled:opacity-50 hover:brightness-110;
   }
 
   .btn-primary {
     @apply bg-cyan-800 text-cyan-900 tracking-wide font-black;
   }
-
 }
 
-  input.ng-invalid.ng-dirty {
-    border: 2px solid red;
-  }
+input.ng-invalid.ng-dirty {
+  border: 2px solid red;
+}

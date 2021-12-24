@@ -30,7 +30,7 @@ const SELECT_TIP_ACCESSOR = {
             type="button"
             (click)="onTipSelected(tip)"
             [ngClass]="{ 'text-cyan-900 bg-cyan-800': tip === selectedTip }"
-            class="bg-cyan-900 font-black py-2 rounded-md text-center text-2xl hover:opacity-50"
+            class="bg-cyan-900 font-black py-2 rounded-md duration-500 text-center text-2xl hover:opacity-50"
           >
             <p>{{ tip * 100 }}%</p>
           </button>
