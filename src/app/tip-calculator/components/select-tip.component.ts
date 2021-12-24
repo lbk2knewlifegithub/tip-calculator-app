@@ -52,7 +52,7 @@ const SELECT_TIP_ACCESSOR = {
     `
       :host {
         &.ng-invalid.ng-dirty input {
-          border: 2px solid red;
+          @apply border-4 border-red-500;
         }
       }
     `,

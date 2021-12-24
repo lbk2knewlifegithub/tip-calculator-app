@@ -26,15 +26,8 @@
 
   //make default form look nice
   [type="text"],
-  [type="email"],
-  [type="url"],
-  [type="password"],
-  [type="number"],
-  [type="text-field"],
-  [multiple],
-  textarea,
-  select {
-    @apply font-black text-cyan-900 w-full border-2 border-transparent bg-cyan-400  rounded-lg shadow-sm focus:border-cyan-800;
+  [type="number"] {
+    @apply font-black text-cyan-900 ring-0 border-4 border-transparent w-full bg-cyan-400  rounded-lg focus:border-4 focus:ring-0 focus:border-cyan-800;
   }
 }
 
@@ -49,5 +42,5 @@
 }
 
 input.ng-invalid.ng-dirty {
-  border: 2px solid red;
+  @apply border-4 border-red-500;
 }
